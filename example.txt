@@ -1,6 +1,0 @@
-//Your student I
-Do start vim editor, run the command: vim
-The editor is now in command mode. To start editing the file content, enter::i[enter]
-To save: :w
-To save and exit: :wq 
-To exit: :q
