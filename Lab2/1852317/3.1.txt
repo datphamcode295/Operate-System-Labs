@@ -1,0 +1,20 @@
+PID of child process = 3235 
+PARENT: value = 19
+1. What the output will be at LINE A? Does this value not change for every process
+executions? Explain your answer.
+	- The output of line A is 3235. Every time the process executed, the value of line A 
+	by adding 2. Ex: the next value is 3237, then 3239,...
+	- Explain: When the program executed, it take new id process and then fork() was
+	called to creat child take an id+1. The next execution will creat a new parent process
+	take id+2 and similar the child take id+3. That why every time the process executed, 
+	the value of line A change by adding 2 (there are 2 processes created every time the 
+	program executed).
+
+2. What the output will be at LINE C? Explain your answer.
+	- The output of Line C is 19. Because the command is in the parent process, which do not effect by changing in child process variable. Therefore, it is unchanged.
+
+3. Remove line C from the program. Observe your display result onto the screen and
+give your remark.
+	- The parent will be executed first and its output would be on the screen before the 
+	child. This is because wait() function was deleted so the parent process do not need to waiting for child process anymore. Therefore,
+	the printf in parent can display before the child. 
