@@ -12,8 +12,11 @@ void *mythread (void *arg ){
 
  pthread_mutex_lock(&lock ) ;
  int i ;
- for ( i = 0; i < 1e7 ; i++)
+ for ( i = 0; i < 10 ; i++)
+ {
  counter = counter + 1;
+ printf ("%s : \n %d" , (char *) arg , i) ;
+ }
  pthread_mutex_unlock(&lock ) ;
 
  printf ("%s : done\n" , (char *) arg ) ;
