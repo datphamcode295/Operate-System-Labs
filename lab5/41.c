@@ -59,7 +59,7 @@ long my_id = (long) tid ;
  pthread_mutex_init(&count_mutex , NULL) ;
  pthread_cond_init(&count_threshold_cv , NULL) ;
 
- thread_attr_init(&attr ) ;
+ pthread_attr_init(&attr ) ;
  pthread_attr_setdetachstate(&attr , PTHREAD_CREATE_JOINABLE) ;
 
  pthread_create(&p1 , &attr , watch_count , (void *) t1 ) ;
